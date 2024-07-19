@@ -10,8 +10,29 @@ import './Login.scss';
 class Login extends Component {
     constructor(props) {
         super(props);
-        this.btnLogin = React.createRef();
+        this.state = {
+            username: '',
+            password: ''
+        }
     }
+
+    handleOnChangeUsername = (event) => {
+        this.setState({
+            username: event.target.value
+        })
+    }
+
+    hangleOnChangePassword = (event) => {
+        this.setState({
+            password: event.target.value
+
+        })
+    }
+
+    handleLogin = () => {
+        console.log(this.state.username, this.state.password)
+    }
+
 
     render() {
         return (
@@ -21,15 +42,26 @@ class Login extends Component {
                         <div className='text-center col-12 text-login '>Login</div>
                         <div className='form-group col-12 login-input'>
                             <label>Username:</label>
-                            <input type='text' className='form-control' placeholder='Enter your username' />
+                            <input
+                                type='text'
+                                className='form-control'
+                                placeholder='Enter your username'
+                                value={this.state.username}
+                                onChange={(event) => { this.handleOnChangeUsername(event) }} />
                         </div>
                         <div className='form-group col-12 login-input'>
                             <label>Password</label>
-                            <input type='password' className='form-control' placeholder='Enter your password' />
+                            <input
+                                type='password'
+                                className='form-control'
+                                placeholder='Enter your password'
+                                value={this.state.password}
+                                onChange={(event) => { this.hangleOnChangePassword(event) }}
+                            />
                         </div>
                         <div className='text-center col-12 '>
 
-                            <button className='btn-login'>Login</button>
+                            <button className='btn-login' onClick={() => { this.handleLogin() }}>Login</button>
                         </div>
                         <div className='col-12 forgot-login'>
                             Forgot your password
@@ -38,8 +70,8 @@ class Login extends Component {
                             <span className='author-login'>Or sign with:</span>
                         </div>
                         <div className='icon-login'>
-                            <i class="fa-brands fa-google-plus-g google"></i>
-                            <i class="fa-brands fa-facebook facebook"></i>
+                            <i className="fa-brands fa-google-plus-g google"></i>
+                            <i className="fa-brands fa-facebook facebook"></i>
                         </div>
                     </div>
                 </div>

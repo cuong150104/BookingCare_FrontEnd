@@ -4,11 +4,17 @@
 
     .login-container {
         background-color: white;
-        margin: 0 auto;
-        width: 30rem;
-        height: 35rem;
         border-radius: 10px;
         padding-top: 10px;
+
+        left: 0;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 27rem;
+        height: 32rem;
 
         .login-content {
             padding: 10px;
@@ -35,10 +41,11 @@
                 align-content: center;
                 border: none;
                 border-radius: 20px;
-                width: 50%;
+                width: 100%;
                 height: 2rem;
                 margin: 1rem 0;
-               
+                background-color: #53698a;
+
             }
 
             .author-login {
@@ -49,15 +56,16 @@
                 align-content: center;
             }
 
-            .icon-login{
+            .icon-login {
                 font-size: 30px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 align-content: center;
-                margin-top:3rem;
+                margin-top: 3rem;
 
             }
+
             .google {
                 background: white;
                 color: #0067ff;
