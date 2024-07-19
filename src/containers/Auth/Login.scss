@@ -1,0 +1,72 @@
+.login-backgound {
+    background-color: rgb(91, 91, 207);
+    height: 100rem;
+
+    .login-container {
+        background-color: white;
+        margin: 0 auto;
+        width: 30rem;
+        height: 35rem;
+        border-radius: 10px;
+        padding-top: 10px;
+
+        .login-content {
+            padding: 10px;
+
+            .text-login {
+                font-weight: 600;
+                font-size: 30px;
+                padding-top: 30px;
+            }
+
+            .login-input {
+                margin: 10px 0;
+            }
+
+            .forgot-login {
+                margin-top: 1rem;
+                font-size: 12px;
+            }
+
+            .btn-login {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                border: none;
+                border-radius: 20px;
+                width: 50%;
+                height: 2rem;
+                margin: 1rem 0;
+               
+            }
+
+            .author-login {
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+
+            .icon-login{
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                margin-top:3rem;
+
+            }
+            .google {
+                background: white;
+                color: #0067ff;
+            }
+
+            .facebook {
+                background: white;
+                color: #0067ff;
+            }
+        }
+    }
+}
