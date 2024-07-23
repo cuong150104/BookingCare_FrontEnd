@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 import { push } from "connected-react-router";
 import '@fortawesome/fontawesome-free/js/all.js';
 import * as actions from "../../store/actions";
-
 import './Login.scss';
-
 
 class Login extends Component {
     constructor(props) {
@@ -33,7 +31,6 @@ class Login extends Component {
         console.log(this.state.username, this.state.password)
     }
 
-
     render() {
         return (
             <div className='login-backgound'>
@@ -60,14 +57,13 @@ class Login extends Component {
                             />
                         </div>
                         <div className='text-center col-12 '>
-
                             <button className='btn-login' onClick={() => { this.handleLogin() }}>Login</button>
                         </div>
                         <div className='col-12 forgot-login'>
                             Forgot your password
                         </div>
                         <div className='clo-12'>
-                            <span className='author-login'>Or sign with:</span>
+                            <span className='author-login'>Or sign with:   </span>
                         </div>
                         <div className='icon-login'>
                             <i className="fa-brands fa-google-plus-g google"></i>
