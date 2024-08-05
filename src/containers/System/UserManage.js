@@ -3,12 +3,15 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss'
 import { getAllUsers } from '../../services/userService';
+import ModalUser from './ModalUser';
+import { Button } from 'reactstrap';
 class UserManage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            arrUsers: []
+            arrUsers: [],
+            isOpenModalUser: false
         }
     }
 
@@ -20,17 +23,39 @@ class UserManage extends Component {
                 arrUsers: response.users
             })
         }
-
-
+    }
+    handleAddNewUser = () => {
+        this.setState({
+            isOpenModalUser: true,
+        })
     }
 
+    toggleFromParent = () => {
+        this.setState({
+            isOpenModalUser: !this.state.isOpenModalUser
+        })
+    }
 
     render() {
         let arrUsers = this.state.arrUsers;
-        console.log(">> check 22", arrUsers);
         return (
+
             <div className='users-container'>
+                <ModalUser
+                    isOpen={this.state.isOpenModalUser}
+                    toggleFromParent={this.toggleFromParent}
+                    className={'modal-user-container'}
+                    size="lg"
+                />
                 <div className='title text-center'>Manage users</div>
+                <div className="mx-1">
+                    <button className="btn btn-primary px-2 mx-2"
+                        onClick={() => this.handleAddNewUser()}
+                    >
+                        <i className="fa-solid fa-plus px-1"></i>
+                        Add new users
+                    </button>
+                </div>
                 <div className='users-table mt-3 mx-3'>
                     <table id="customers">
                         <tr>
@@ -43,7 +68,6 @@ class UserManage extends Component {
                         </tr>
 
                         {arrUsers && arrUsers.map((item, index) => {
-                            console.log(">> check ====", item, index);
                             return (
                                 <tr>
                                     <td>{item.email}</td>
