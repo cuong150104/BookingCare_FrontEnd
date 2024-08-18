@@ -2,24 +2,37 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { emitter } from '../../utils/emitter'
 class ModalUser extends Component {
-
-    state = {
-        email: '',
-        password: '',
-        firstName: '',
-        lastName: '',
-        address: '',
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            password: '',
+            firstName: '',
+            lastName: '',
+            address: '',
+        }
+        this.listenToEmiiter();
     }
 
-    componentDidMount() {
+    listenToEmiiter() {
+        emitter.on('EVENT_CLEAR_MODAL_DATA', () => {
+            this.setState({
+                email: '',
+                password: '',
+                firstName: '',
+                lastName: '',
+                address: '',
+            })
+        })
     }
-  
+
     toggle = () => {
         console.log(">>check toggle", this.props.isOpen)
         this.props.toggleFromParent()
     }
-   
+
 
     handleChangeInput = (event, id) => {
         let copyState = { ...this.state }
@@ -43,18 +56,16 @@ class ModalUser extends Component {
     }
     handleAddNewUser = () => {
         let isValid = this.checkValideInput();
-        if(isValid)
-        {
+        if (isValid) {
             this.props.createNewUser(this.state)
-            console.log(">>check", this.state)
         }
         this.props.toggleFromParent()
     }
     render() {
         console.log('checl child props', this.props);
         return (
-            <Modal isOpen={this.props.isOpen} toggle={() => this.toggle()} 
-            className={this.props.className}
+            <Modal isOpen={this.props.isOpen} toggle={() => this.toggle()}
+                className={this.props.className}
 
             >
                 <ModalHeader toggle={() => this.toggle()}>Modal title</ModalHeader>
