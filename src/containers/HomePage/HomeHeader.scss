@@ -1,0 +1,70 @@
+.home-header-container {
+    height: 60px;
+    width: 100%;
+    border: 1px solid red;
+    padding: 0 20px;
+
+    .home-header-content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+        .left-content {
+            width: 25%;
+            border: 1px solid rgb(195, 255, 0);
+            display: flex;
+            align-items: center;
+
+
+
+            .header-logo {
+                background: url(../../assets/logo.png) center center no-repeat;
+                background-size: contain;
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+            }
+
+            .i_header {
+                font-size: 25px;
+                color: rgb(133, 133, 121);
+                cursor: pointer;
+            }
+
+        }
+
+        .center-content {
+            width: 50%;
+            border: 1px solid rgb(34, 0, 255);
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+
+            .child-content {
+                .subs-title {
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .right-content {
+            width: 25%;
+            border: 1px solid rgb(43, 255, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .flag{
+                margin-left: 10px;
+            }
+            .question-icon{
+                background-color: rgb(7, 7, 7);
+                border-radius: 50%;
+                color: beige;
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}
