@@ -7,39 +7,79 @@ class HomeHeader extends Component {
     render() {
 
         return (
-            <div className='home-header-container'>
-                <div className='home-header-content'>
-                    <div className='left-content'>
-                        <i class="fa-solid fa-bars i_header"></i>
-                        <div className='header-logo'>
+            <React.Fragment>
+                <div className='home-header-container'>
+                    <div className='home-header-content'>
+                        <div className='left-content'>
+                            <i className="fa-solid fa-bars i_header"></i>
+                            <div className='header-logo'>
 
+                            </div>
+                        </div>
+                        <div className='center-content'>
+                            <div className='child-content'>
+                                <div><b>Chuyên khoa</b></div>
+                                <div className='subs-title'>Tìm khác sĩ theo chuyên khoa</div>
+                            </div>
+                            <div className='child-content'>
+                                <div><b>Cơ sở y tế</b></div>
+                                <div className='subs-title'>Chọn bệnh viện phòng khám</div>
+                            </div>
+                            <div className='child-content'>
+                                <div><b>Bác sĩ</b></div>
+                                <div className='subs-title'>Chọn bác sĩ giỏi</div>
+                            </div>
+                            <div className='child-content'>
+                                <div><b>Gói khám</b></div>
+                                <div className='subs-title'>khám sức tổng quát</div>
+                            </div>
+                        </div>
+                        <div className='right-content'>
+                            <div className='support'><i className="fa-solid fa-question question-icon"></i>Hỗ trợ</div>
+                            <div className='flag'>VN</div>
                         </div>
                     </div>
-                    <div className='center-content'>
-                        <div className='child-content'>
-                            <div><b>Chuyên khoa</b></div>
-                            <div className='subs-title'>Tìm khác sĩ theo chuyên khoa</div>
-                        </div>
-                        <div className='child-content'>
-                            <div><b>Cơ sở y tế</b></div>
-                            <div className='subs-title'>Chọn bệnh viện phòng khám</div>
-                        </div>
-                        <div className='child-content'>
-                            <div><b>Bác sĩ</b></div>
-                            <div className='subs-title'>Chọn bác sĩ giỏi</div>
-                        </div>
-                        <div className='child-content'>
-                            <div><b>Gói khám</b></div>
-                            <div className='subs-title'>khám sức tổng quát</div>
+
+                </div>
+                <div className='home-header-banner'>
+                    <div className='content-up'>
+                        <div className='title1'>NỀN TẢNG Y TẾ</div>
+                        <div className='title2'>CHĂM SÓC SỨC KHỎE TOÀN DIỆN</div>
+                        <div className='search'>
+                            <i className="fa-solid fa-magnifying-glass i-search"></i>
+                            <input type='text' placeholder='Tìm chuyên khoa khám bệnh' />
                         </div>
                     </div>
-                    <div className='right-content'>
-                        <div className='support'><i class="fa-solid fa-question question-icon"></i>Hỗ trợ</div>
-                        <div className='flag'>VN</div>
+                    <div className='content-down'>
+                        <div className='options'>
+                            <div className='options-child'>
+                                <div className='icon-child'><i className="fa-solid fa-hospital i-icon"></i></div>
+                                <div className='text-child'>Khám chuyên khoa</div>
+                            </div>
+                            <div className='options-child'>
+                                <div className='icon-child'><i className="fa-solid fa-mobile i-icon "></i></div>
+                                <div className='text-child'>Khám từ xa</div>
+                            </div>
+                            <div className='options-child'>
+                                <div className='icon-child'><i className="fa-solid fa-microscope i-icon "></i></div>
+                                <div className='text-child'>Khám tổng quát</div>
+                            </div>
+                            <div className='options-child'>
+                                <div className='icon-child'><i className="fa-solid fa-hospital i-icon"></i></div>
+                                <div className='text-child'>Xét nghiệm y học</div>
+                            </div>
+                            <div className='options-child'>
+                                <div className='icon-child'><i className="fa-solid fa-brain i-icon "></i></div>
+                                <div className='text-child'>Sức khỏe tinh thần</div>
+                            </div>
+                            <div className='options-child'>
+                                <div className='icon-child'><i className="fa-solid fa-tooth i-icon "></i></div>
+                                <div className='text-child'>Khám nha khoa</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-            </div>
+            </React.Fragment>
         );
     }
 

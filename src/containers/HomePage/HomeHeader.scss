@@ -55,10 +55,11 @@
             align-items: center;
             justify-content: center;
 
-            .flag{
+            .flag {
                 margin-left: 10px;
             }
-            .question-icon{
+
+            .question-icon {
                 background-color: rgb(7, 7, 7);
                 border-radius: 50%;
                 color: beige;
@@ -67,4 +68,111 @@
             }
         }
     }
+}
+
+.home-header-banner {
+    background: url('../../assets/unnamed.png');
+    height: 485px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+
+    .content-up {
+        height: 50%;
+        border: 1px solid red;
+
+        .title1 {
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            text-shadow: 1px 1px 1px #6d6666;
+            margin-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .title2 {
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            text-shadow: 1px 1px 1px #6d6666;
+        }
+
+        .search {
+            display: flex;
+            border-radius: 50px;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 10px;
+            margin-top: 15px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 0);
+
+            .i-search {
+                margin: 0 10px;
+            }
+
+            input {
+                height: 30px;
+                width: 350px;
+                background: transparent;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+
+    .content-down {
+        height: 50%;
+        border: 1px solid red;
+
+        .options {
+            text-align: center;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            .options-child {
+                width: 100px;
+                height: 100px;
+                border: 1px solid red;
+
+                .icon-child {
+                    width: 40px;
+                    height: 40px;
+                    // color: #49bce2;
+                    margin: auto;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .i-icon {
+                        color: #49bce2;
+                        font-size: 20px;
+                        // text-align: center;
+
+                    }
+                }
+
+
+                .text-child {
+                    text-align: center;
+                    font-size: 17px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    &:hover {
+                        color: #49bce2;
+                    }
+                }
+            }
+        }
+    }
+
 }
