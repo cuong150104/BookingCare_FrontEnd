@@ -1,0 +1,93 @@
+.section-share.section-specialty, .section-share.section-out-standing-doctor {
+  background: #eae6e6;
+}
+.section-share.section-medical-facility, .section-share.section-hand-book {
+  background: white;
+}
+.section-share .section-content {
+  padding-top: 30px;
+}
+.section-share .section-content .section-container {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 100px;
+}
+.section-share .section-content .section-container .section-header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.section-share .section-content .section-container .section-header .title {
+  font-size: large;
+}
+.section-share .section-content .section-container .section-header .btn-see-more {
+  width: 100px;
+  height: 30px;
+}
+.section-share .section-content .section-container .section-body .image-slider-container {
+  margin: 0 auto;
+  width: 70%;
+}
+.section-share .section-content .section-container .section-body .image-slider-container .slick-prev:before,
+.section-share .section-content .section-container .section-body .image-slider-container .slick-next:before {
+  color: black;
+}
+.section-share .section-content .section-container .section-body .img-customize {
+  width: 200px;
+  padding: 5px;
+}
+.section-share .section-content .section-container .section-body .img-customize .customize-boder {
+  border: 1px solid #958282;
+}
+.section-share .section-content .section-container .section-body .img-customize .customize-boder .img-doctor {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.section-share .section-content .section-container .section-body .slick-prev:before {
+  font-family: none !important;
+  font-size: 30px !important;
+  color: black !important;
+}
+.section-share .section-content .section-container .section-body .slick-prev {
+  width: 40px !important;
+  height: 40px !important;
+  background: white !important;
+  border: 1px solid #7a8489 !important;
+  z-index: 1000 !important;
+}
+.section-share .section-content .section-container .section-body .slick-prev:hover {
+  background: #7a8489 !important;
+}
+.section-share .section-content .section-container .section-body .slick-next:before {
+  font-family: none !important;
+  font-size: 30px !important;
+  color: black !important;
+}
+.section-share .section-content .section-container .section-body .slick-next {
+  width: 40px !important;
+  height: 40px !important;
+  background: white !important;
+  border: 1px solid #7a8489 !important;
+  z-index: 1000 !important;
+}
+.section-share .section-content .section-container .section-body .slick-next:hover {
+  background: #7a8489 !important;
+}
+.section-share .section-content .section-container .section-body .sectionImg {
+  width: 260px;
+  height: 150px;
+  background-color: #eee;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.section-share .section-content .section-container .section-body .sectionImg.section-outstading-doctor {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+img.sectionImg.section-outstading-doctor {
+  border-radius: 50%;
+}

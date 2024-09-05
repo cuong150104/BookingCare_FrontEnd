@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Slider from "react-slick";
 
-import sectionImg from '../../../assets/specialty/co-xuong-khop.jpeg';
-class Specialty extends Component {
+import sectionImg from '../../../assets/handBook/handBook.jpg';
+class HandBook extends Component {
     render() {
       
         return (
-            <div className='section-share section-specialty'>
+            <div className='section-share section-hand-book'>
                 <div className='section-content'>
                     <div className="image-slider-container">
                         <div className='section-container'>
                             <div className='section-header'>
-                                <h4 className='title'>Chuyên khoa phổ biến</h4>
+                                <h4 className='title'>Cẩm nang</h4>
                                 <button className='btn-see-more'>Xem thêm</button>
                             </div>
                             <div className='section-body'>
@@ -66,4 +66,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default connect(mapStateToProps, mapDispatchToProps)(HandBook);
