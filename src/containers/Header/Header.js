@@ -6,6 +6,7 @@ import Navigator from '../../components/Navigator';
 import { adminMenu } from './menuApp';
 import './Header.scss';
 import { LANGUAGES } from '../../utils';
+import { FormattedMessage } from 'react-intl';
 class Header extends Component {
     handleChangeLanguges = (language) => {
         this.props.changeLanguageAppRedux(language)
@@ -19,6 +20,7 @@ class Header extends Component {
                 <div className="header-tabs-container">
                     <Navigator menus={adminMenu} />
                 </div>
+                <div className='welcom'><FormattedMessage id='home-header.welcom'/>, Admin!</div>
                 <div className='languages'>
                     <div
                         className={language == LANGUAGES.VI ? 'languages-vi active' : 'languages-vi'}

@@ -23,6 +23,11 @@
   height: 40px;
   position: relative;
 }
+.header-container .welcom {
+  margin-left: 800px;
+  text-align: center;
+  margin-top: 10px;
+}
 .header-container .languages {
   display: flex;
   align-items: center;
